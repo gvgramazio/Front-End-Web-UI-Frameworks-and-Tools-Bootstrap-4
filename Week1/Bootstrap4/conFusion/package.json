@@ -6,12 +6,12 @@
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lite": "lite-server"
+    "lite": "./node_modules/lite-server/bin/lite-server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.2.2"
+    "lite-server": "^2.3.0"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6"
