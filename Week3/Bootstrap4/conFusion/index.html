@@ -18,6 +18,7 @@
 </head>
 
 <body>
+	<!-- Navigation bar -->
 	<nav class="navbar navbar-inverse navbar-toggleable-sm fixed-top">
 		<div class="container">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -25,16 +26,54 @@
 			</button>
 			<a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
 			<div class="collapse navbar-collapse" id="Navbar">
-				<ul class="navbar-nav">
+				<ul class="navbar-nav mr-auto"">
 					<li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
 					<li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
 					<li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
 				</ul>
+				<span class="navbar-text">
+					<a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a>
+				</span>
 			</div>
 		</div>
 	</nav>
 
+	<!-- Login Modal -->
+	<div id="loginModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" role="content">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Login </h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form class="form-inline">
+						<div class="form-group">
+							<label class="sr-only" for="exampleInputEmail3">Email address</label>
+							<input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="exampleInputPassword3">Password</label>
+							<input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox"> Remember me
+							</label>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+					<button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Jumbotron -->
 	<header class="jumbotron">
 		<div class="container">
 			<div class="row row-header">
@@ -46,7 +85,9 @@
 					<img src="img/logo.png" class="img-fluid">
 				</div>
 				<div class="col-12 col-sm align-self-center">
-					<a class="btn btn-warning btn-block btn-sm" href="#reservetable" role="button">Reserve a Table</a>
+					<a type="button" class="btn btn-warning btn-sm btn-block"
+						data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
+						data-placement="bottom" href="#reserveform">Reserve a Table</a>
 				</div>
 			</div>
 		</div>
@@ -54,6 +95,7 @@
 
 	<div class="container">
 
+		<!-- Our Lipsmacking Culinary Creations -->
 		<div class="row row-content align-items-center">
 			<div class="col-sm-4 col-md-3 flex-last">
 				<h3>Our Lipsmacking Culinary Creations</h3>
@@ -71,6 +113,7 @@
 			</div>
 		</div>
 
+		<!-- This Month's Promotions -->
 		<div class="row row-content align-items-center">
 			<div class="col-sm-4 col-md-3">
 				<h3>This Month's Promotions</h3>
@@ -88,6 +131,7 @@
 			</div>
 		</div>
 
+		<!-- Meet our Culinary Specialists -->
 		<div class="row row-content align-items-center">
 			<div class="col-sm-4 col-md-3 flex-last">
 				<h3>Meet our Culinary Specialists</h3>
@@ -109,12 +153,13 @@
 			</div>
 		</div>
 
+		<!-- Reserve a Table -->
 		<div class="row row-content justify-content-center">
 			<div class="col col-sm-8 align-self-center">
 				<div class="card">
 					<h3 class="card-header bg-warning text-white">Reserve a Table</h3>
 					<div class="card-block">
-						<form id="reservetable">
+						<form id="reserveform">
 							<div class="form-group row align-items-center">
 								<label class="col-12 col-sm-2 col-form-label">Number of Guest</label>
 								<div class="form-check form-check-inline col-12 col-sm">
@@ -212,6 +257,12 @@
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="node_modules/tether/dist/js/tether.min.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
 </body>
 
 </html>
