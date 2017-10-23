@@ -1,0 +1,38 @@
+.cw-table {
+
+}
+
+.cw-table td {
+	border: 1px solid black;
+	width: 40px;
+	height: 40px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.square {
+	width: 24px;
+	height: 24px;
+	background-color: #000;
+	position: relative;
+	left: 6px;
+}
+
+.number {
+	width: 0px;
+	height: 0px;
+	font-size: 12px;
+	background-color: #000;
+	position: relative;
+	left: 0px;
+	top: -8px;
+}
+
+.letter {
+	width: 5px;
+	height: 5px;
+	font-size: 5px;
+	background-color: #555;
+	position: relative;
+	left: 0px;
+}
